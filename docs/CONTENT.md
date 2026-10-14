@@ -29,5 +29,5 @@ Add a `caseStudy` object to a project in `projects.ts` with its sections (_The p
 
 - [ ] The 35–40% performance gain, 5+ access levels and 1–2 week migration are Hardik's to claim, and how each was measured
 - [ ] Simform end date wording (currently "Jan 2022 – Oct 2026")
-- [ ] Production domain, which sets `NEXT_PUBLIC_SITE_URL`
+- [x] Production domain: `https://hardik-sorathiya.vercel.app` (default in `src/lib/site.ts`)
 - [ ] A personal or public GitHub project worth featuring

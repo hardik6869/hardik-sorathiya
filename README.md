@@ -26,9 +26,9 @@ npm run dev                  # http://localhost:3000
 
 ### Environment variables
 
-| Variable               | Required       | Purpose                                                        |
-| ---------------------- | -------------- | -------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | for production | Canonical URL, sitemap, Open Graph (e.g. `https://hardik.dev`) |
+| Variable               | Required | Purpose                                                                               |
+| ---------------------- | -------- | ------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | no       | Canonical URL, sitemap, Open Graph. Defaults to `https://hardik-sorathiya.vercel.app` |
 
 ## Scripts
 

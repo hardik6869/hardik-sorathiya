@@ -1,8 +1,12 @@
 /**
  * Public site URL, used for canonical links, the sitemap and Open Graph tags.
- * Set NEXT_PUBLIC_SITE_URL once the production domain is known.
+ * Defaults to the main (Vercel) site so every deployment, including mirrors, points there.
+ * Set NEXT_PUBLIC_SITE_URL only to override it (e.g. after moving to a custom domain).
  */
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://hardik-sorathiya.vercel.app").replace(
+  /\/$/,
+  "",
+);
 
 export const siteName = "Hardik Sorathiya";
 

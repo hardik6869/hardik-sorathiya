@@ -71,7 +71,7 @@ export const projects: Project[] = [
   {
     slug: "workforce-admin-platform",
     title: "Time Tracking & Workforce Management Admin Platform",
-    domain: "Internal tools · HR",
+    domain: "Admin panel · Workforce management",
     icon: "clock",
     summary:
       "A Next.js administration platform for time tracking and user management, with role-based access and Microsoft (MSAL) sign-in.",

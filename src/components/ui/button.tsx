@@ -9,8 +9,8 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-accent text-accent-fg shadow-[0_8px_24px_-8px] shadow-accent/50 hover:bg-accent/90 hover:shadow-accent/70",
-  secondary: "border border-line-strong bg-surface text-fg hover:border-fg/30 hover:bg-fg/[0.03]",
+    "bg-accent text-accent-fg shadow-sm shadow-accent/20 hover:bg-accent/90 hover:shadow-md hover:shadow-accent/25",
+  secondary: "border border-line-strong bg-surface text-fg hover:border-fg/30 hover:bg-fg/3",
 };
 
 const sizes: Record<Size, string> = {

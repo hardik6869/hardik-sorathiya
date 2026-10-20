@@ -60,7 +60,7 @@ export function Approach() {
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-panel-fg/15 bg-panel-fg/[0.06] p-6 sm:p-8 lg:col-span-5">
+          <div className="rounded-2xl border border-panel-fg/15 bg-panel-fg/6 p-6 sm:p-8 lg:col-span-5">
             <p className="text-sm font-medium text-panel-fg/80">Case in point</p>
             <h4 className="mt-2 text-lg font-semibold">{aiWorkflow.caseTitle}</h4>
             <p className="mt-3 leading-relaxed text-pretty text-panel-fg/85">{aiWorkflow.caseBody}</p>

@@ -41,7 +41,7 @@ export function Contact() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 grid-backdrop opacity-50" />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 left-1/2 h-[320px] w-[640px] -translate-x-1/2 accent-glow"
+        className="pointer-events-none absolute top-1/3 left-1/2 h-80 w-160 -translate-x-1/2 accent-glow"
       />
       <Container className="relative">
         <p className="flex items-center gap-3 text-sm font-medium text-muted">
@@ -75,7 +75,7 @@ export function Contact() {
                   {"display" in rest ? (
                     <>
                       <span className="block text-sm text-muted">{label}</span>
-                      <span className="mt-0.5 block text-[15px] font-medium [overflow-wrap:anywhere] text-fg transition-colors group-hover:text-accent sm:text-base">
+                      <span className="mt-0.5 block text-[15px] font-medium wrap-anywhere text-fg transition-colors group-hover:text-accent sm:text-base">
                         {rest.display}
                       </span>
                     </>

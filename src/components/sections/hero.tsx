@@ -26,7 +26,7 @@ export function Hero() {
             className="group fade-up relative mx-auto aspect-square w-32 sm:w-52 lg:mr-0 lg:w-full lg:max-w-[min(340px,50svh)]"
             style={delay(0)}
           >
-            <div className="size-full overflow-hidden rounded-full border border-line-strong bg-surface shadow-[0_30px_80px_-40px] shadow-black/60 transition-[border-color,box-shadow] duration-500 group-hover:border-accent/60 group-hover:shadow-accent/40">
+            <div className="size-full overflow-hidden rounded-full border border-line-strong bg-surface shadow-[0_16px_40px_-24px] shadow-black/40 transition-[border-color,box-shadow] duration-500 group-hover:border-accent/60 group-hover:shadow-accent/25">
               <Image
                 src={portrait}
                 alt={`Portrait of ${profile.name}`}

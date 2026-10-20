@@ -23,7 +23,12 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-line">
+    <footer className="relative border-t border-line bg-surface chrome-tint">
+      {/* Accent hairline along the top edge, fading out at both ends. Decorative only. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -top-px h-px bg-linear-to-r from-transparent via-accent/60 to-transparent"
+      />
       {/*
         lg: three columns on one line — name/role (left), page links (exact center), icons (right).
         The two outer blocks grow equally (flex-1 basis-0), so the links stay centered on the page.
@@ -69,7 +74,7 @@ export function Footer() {
                   : { "aria-label": label })}
                 className="inline-flex size-11 items-center justify-center rounded-full border border-line bg-surface transition-[border-color,transform] duration-200 hover:border-line-strong motion-safe:hover:-translate-y-0.5"
               >
-                <Icon className={`size-[18px] ${color}`} aria-hidden="true" />
+                <Icon className={`size-4.5 ${color}`} aria-hidden="true" />
               </a>
             </li>
           ))}

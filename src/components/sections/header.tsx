@@ -11,6 +11,10 @@ import { profile } from "@/content/profile";
 import { isActiveNav, navItems } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
+// The surname is set in the italic serif accent used across headings.
+const [firstName, ...rest] = profile.name.split(" ");
+const lastName = rest.join(" ");
+
 export function Header() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const pathname = usePathname();
@@ -20,61 +24,50 @@ export function Header() {
   const closeMenu = () => dialogRef.current?.close();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur-md">
-      <Container className="flex h-16 items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 border-b border-line bg-surface/60 chrome-tint backdrop-blur-lg">
+      {/* Name on the left; page links, the call to action and the theme toggle on the right. */}
+      <Container className="flex h-16 items-center justify-between gap-6">
         <Link
           href="/"
-          className="group flex items-center gap-2.5 font-mono text-sm font-medium"
+          className="inline-flex items-baseline gap-1 rounded leading-none whitespace-nowrap transition-opacity duration-200 hover:opacity-75"
           aria-label={`${profile.name}, home`}
         >
-          <span className="flex size-8 items-center justify-center rounded-md bg-fg text-xs text-bg transition-colors group-hover:bg-accent group-hover:text-accent-fg">
-            HS
-          </span>
-          <span className="hidden sm:inline">{profile.name}</span>
+          <span className="text-lg font-semibold tracking-tight">{firstName}</span>
+          {/* The serif runs small next to Geist, so it is set slightly larger to match its cap height. */}
+          <span className="serif-accent text-[1.3rem] tracking-normal text-accent">{lastName}</span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
-            {navItems.map((item) => (
-              <li key={item.href} className={"cta" in item ? "ml-2" : undefined}>
-                <Link
-                  href={item.href}
-                  aria-current={isActiveNav(item, pathname) ? "page" : undefined}
-                  className={
-                    "cta" in item
-                      ? // Highlighted call to action; a ring marks it as the current page.
-                        buttonClasses({
-                          size: "sm",
-                          className:
-                            "aria-[current=page]:ring-2 aria-[current=page]:ring-accent/40 aria-[current=page]:ring-offset-2 aria-[current=page]:ring-offset-bg",
-                        })
-                      : cn(
-                          "relative rounded-md px-3 py-2 text-sm text-muted transition-colors after:absolute after:inset-x-3 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:text-fg hover:after:scale-x-100",
-                          "aria-[current=page]:text-fg aria-[current=page]:after:scale-x-100",
-                        )
-                  }
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="flex items-center gap-2">
+          <nav aria-label="Primary" className="hidden lg:block">
+            <ul className="flex items-center gap-1">
+              {navItems.map((item) => (
+                <li key={item.href} className={"cta" in item ? "ml-2" : undefined}>
+                  <Link
+                    href={item.href}
+                    aria-current={isActiveNav(item, pathname) ? "page" : undefined}
+                    className={
+                      "cta" in item
+                        ? // Highlighted call to action; a ring marks it as the current page.
+                          buttonClasses({
+                            size: "sm",
+                            className:
+                              "aria-[current=page]:ring-2 aria-[current=page]:ring-accent/40 aria-[current=page]:ring-offset-2 aria-[current=page]:ring-offset-surface",
+                          })
+                        : cn(
+                            "relative rounded-md px-3 py-2 text-sm text-muted transition-colors after:absolute after:inset-x-3 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:text-fg hover:after:scale-x-100",
+                            "aria-[current=page]:text-fg aria-[current=page]:after:scale-x-100",
+                          )
+                    }
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        <div className="flex items-center gap-1">
+          <span aria-hidden="true" className="mx-1 hidden h-5 w-px bg-line-strong lg:block" />
           <ThemeToggle />
-          <a
-            href={profile.resumePath}
-            download
-            className={buttonClasses({
-              variant: "secondary",
-              size: "sm",
-              className: "hidden sm:inline-flex",
-            })}
-          >
-            <Download aria-hidden="true" />
-            Resume
-          </a>
           <button
             type="button"
             onClick={openMenu}

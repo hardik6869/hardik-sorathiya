@@ -12,6 +12,7 @@
 - **Approach:** a 2×2 grid of principle cards, then the AI-workflow panel.
 - **Get in touch:** a short intro, the availability pill, and Email / LinkedIn / GitHub link cards in one row.
 - **Case study:** breadcrumb, icon and domain, title and summary; then the sections as one document divided by rules (problem, role, key decisions as a checked list, outcome set off by an accent rule) beside a single, non-sticky details card (type, impact, stack, live site); previous/next links at the end.
+- **Header:** the name as a wordmark on the left (first name in Geist semibold, surname in the italic serif accent), linking Home; page links, the "Get in touch" button and the theme toggle on the right. Resume downloads live in the hero and mobile menu, not the bar.
 - **Header and footer** sit on `surface` so they separate from the page `bg`, especially in light mode.
 - **Footer:** name, "Software Engineer · Gujarat, India" and one line on the left; page links centered; social icons on the right; copyright below.
 

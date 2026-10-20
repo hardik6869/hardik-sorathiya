@@ -10,7 +10,7 @@ test.describe("home page", () => {
     for (const id of ["about", "skills", "experience", "projects", "approach", "contact"]) {
       await expect(page.locator(`section#${id} h2`)).toHaveCount(1);
     }
-    await expect(page.locator("#projects article")).toHaveCount(4);
+    await expect(page.locator("#projects article")).toHaveCount(5);
     // The hero intentionally has no stat cards.
     await expect(page.locator("main > section").first().locator("dl")).toHaveCount(0);
   });

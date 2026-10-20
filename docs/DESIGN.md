@@ -6,9 +6,9 @@
 
 - **Hero:** a "Software Engineer" badge and the freelance-availability pill, "Hi, I'm Hardik Sorathiya.", one statement ("…with _React.js, Next.js and TypeScript._"), one line of evidence from the resume, buttons and social icons, and a still portrait that zooms gently on hover. Sizes scale with viewport height so it fits one laptop screen.
 - **About:** the lead paragraph lights up word by word as you scroll; Experience and Education are separate cards.
-- **Work:** a 2-column grid of project cards (icon, domain, title, summary, tags, "Read case study").
+- **Work:** a 2-column grid of client project cards (icon, domain, title, summary, tags, "Read case study"), then a "Personal project" block whose single card spans both columns and adds a "Live site" link.
 - **Experience:** the company name stays pinned while the five highlights scroll.
-- **Skills:** six core cards in an asymmetric grid, then four compact "Also working with" cards.
+- **Skills:** seven cards in an asymmetric grid (7+5, 4+4+4, 5+7), mirroring the resume groups.
 - **Approach:** a 2×2 grid of principle cards, then the AI-workflow panel.
 - **Get in touch:** a short intro, the availability pill, and Email / LinkedIn / GitHub link cards in one row.
 - **Footer:** name, "Software Engineer · Gujarat, India" and one line on the left; page links centered; social icons on the right; copyright below.

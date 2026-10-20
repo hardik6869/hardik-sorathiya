@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { ButtonLink } from "@/components/ui/button";
+import { ButtonLink, buttonClasses } from "@/components/ui/button";
 import { TagList } from "@/components/ui/tag";
 import type { Project } from "@/types/content";
 
@@ -57,6 +57,18 @@ export function CaseStudyLayout({ project, next }: CaseStudyLayoutProps) {
               </div>
             ) : null}
             <TagList items={project.stack} label="Tech stack" className="max-w-2xl" />
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonClasses({ variant: "secondary", className: "shrink-0" })}
+              >
+                View live site
+                <ArrowUpRight aria-hidden="true" />
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            ) : null}
           </div>
         </Container>
       </header>

@@ -78,7 +78,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Providers>
           <SkipLink />
           <ScrollProgress />
-          <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-[60] grain" />
+          <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-60 grain" />
           <Header />
           {/* On section pages (/about, /work, …) the section is the first child: give it the same
               top spacing as the hero instead of the larger gap used between sections on Home. */}

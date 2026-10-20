@@ -20,7 +20,7 @@ export function Header() {
   const closeMenu = () => dialogRef.current?.close();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line bg-surface/85 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between gap-4">
         <Link
           href="/"

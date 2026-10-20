@@ -18,6 +18,7 @@ function findCaseStudy(slug: string) {
   if (!project.caseStudy) return null;
   return {
     project: { ...project, caseStudy: project.caseStudy },
+    prev: caseStudies[(index - 1 + caseStudies.length) % caseStudies.length],
     next: caseStudies[(index + 1) % caseStudies.length],
   };
 }

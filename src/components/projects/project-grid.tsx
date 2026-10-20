@@ -28,11 +28,11 @@ function ProjectCard({ project }: { project: Project }) {
   const linked = Boolean(project.caseStudy);
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-[border-color,box-shadow,translate] duration-500 hover:border-accent/50 hover:shadow-[0_30px_80px_-40px] hover:shadow-accent/50 motion-safe:hover:-translate-y-1.5">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-[border-color,box-shadow,translate] duration-500 hover:border-accent/50 hover:shadow-[0_12px_32px_-20px] hover:shadow-accent/30 motion-safe:hover:-translate-y-1">
       {/* Faint icon watermark in the corner adds depth without taking space. */}
       <IconGlyph
         name={project.icon}
-        className="pointer-events-none absolute -right-8 -bottom-10 size-44 stroke-[1.25] text-fg/[0.04] transition-transform duration-700 motion-safe:group-hover:-translate-y-2 motion-safe:group-hover:rotate-[-6deg]"
+        className="pointer-events-none absolute -right-8 -bottom-10 size-44 stroke-[1.25] text-fg/4 transition-transform duration-700 motion-safe:group-hover:-translate-y-2 motion-safe:group-hover:-rotate-6"
       />
 
       <div className="relative flex flex-1 flex-col p-6 sm:p-7">

@@ -11,6 +11,8 @@
 - **Skills:** seven cards in an asymmetric grid (7+5, 4+4+4, 5+7), mirroring the resume groups.
 - **Approach:** a 2×2 grid of principle cards, then the AI-workflow panel.
 - **Get in touch:** a short intro, the availability pill, and Email / LinkedIn / GitHub link cards in one row.
+- **Case study:** breadcrumb, icon and domain, title and summary; then the sections as one document divided by rules (problem, role, key decisions as a checked list, outcome set off by an accent rule) beside a single, non-sticky details card (type, impact, stack, live site); previous/next links at the end.
+- **Header and footer** sit on `surface` so they separate from the page `bg`, especially in light mode.
 - **Footer:** name, "Software Engineer · Gujarat, India" and one line on the left; page links centered; social icons on the right; copyright below.
 
 ## Tokens (`src/styles/globals.css`)
@@ -31,6 +33,7 @@ The theme is set on `<html data-theme>` before first paint: the stored choice, o
 
 - Geist Sans for UI and body, Instrument Serif italic for accent words (`serif-accent`), Geist Mono for small metadata.
 - Fluid scale: `text-display`, `text-h2`, `text-h3`, `text-lead`.
+- Shadows stay tight (`shadow-sm`/`shadow-md`); no large glows around buttons or cards.
 
 ## Layout
 

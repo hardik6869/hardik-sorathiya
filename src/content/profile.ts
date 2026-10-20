@@ -25,9 +25,9 @@ export const profile: Profile = {
   },
   // About intro: restates the resume's professional summary. No project or client names.
   about: [
-    "I'm a Software Engineer with nearly 5 years of experience building scalable, responsive web applications with React.js, Next.js, TypeScript and JavaScript, and working knowledge of Node.js, Express and MongoDB.",
-    "I own frontend modules end to end: requirement analysis, architecture decisions, API integration, testing and production delivery. I work closely with clients, backend developers and designers to ship reliable features on real deadlines.",
-    "Day to day I use GitHub Copilot and Claude Code, with Skills, Commands, Agents and MCP, to speed up debugging, refactoring and development.",
+    "I'm a Software Engineer with nearly 5 years of experience building scalable, production web applications with React.js, Next.js and TypeScript, and working knowledge of Node.js, Express and MongoDB.",
+    "I own frontend modules end to end, from requirements and architecture to testing and release. I'm comfortable working directly with clients, taking over unfamiliar codebases and guiding other developers to keep delivery on track.",
+    "Day to day I use AI-assisted tools, Claude Code (Skills, Commands, Agents, MCP) and GitHub Copilot, to work faster.",
   ],
   education: [
     {

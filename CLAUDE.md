@@ -10,6 +10,7 @@ Static-first personal portfolio. Next.js 16 (App Router, Cache Components), stri
 - Each nav link opens a page with **only** that section: `/about`, `/work`, `/experience`, `/skills`, `/approach`, `/contact`. The pages reuse the section components from `src/components/sections/`.
 - Nav items live in `navItems` (`src/lib/site.ts`). "Get in touch" (`cta: true`) is the highlighted navbar button and is left out of the footer links.
 - Case studies: `/projects/[slug]` (static, `ensureStatic = "navigation"`).
+- Work shows client projects first, then a "Personal project" block (`kind: "personal"` in `src/content/projects.ts`). Personal projects are not anonymized and may link to their live site (`liveUrl`).
 
 ## Content rules
 

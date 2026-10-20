@@ -65,8 +65,12 @@ type CaseStudySection = {
 
 export type Project = {
   slug: string;
+  /** Client work is anonymized; personal projects are not. Defaults to client. */
+  kind?: "client" | "personal";
   title: string;
   domain: string;
+  /** Public live site, for personal projects only. */
+  liveUrl?: string;
   icon: IconName;
   summary: string;
   stack: string[];

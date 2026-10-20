@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Plus } from "lucide-react";
 import { IconGlyph, IconTile } from "@/components/ui/icon";
 import { Reveal } from "@/components/ui/reveal";
 import { TagList } from "@/components/ui/tag";
+import { cn } from "@/lib/utils";
 import type { Project } from "@/types/content";
 
 /** Compact card header: icon tile, domain and type badge on one line. */
@@ -71,10 +72,31 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="mt-auto pt-6">
           <TagList items={project.stack.slice(0, 4)} label={`${project.title} stack`} />
           {linked ? (
-            <div className="mt-5 flex items-center justify-end gap-4 border-t border-line pt-4 sm:justify-between lg:justify-end xl:justify-between">
-              <span className="hidden text-sm text-muted sm:inline lg:hidden xl:inline">
-                Problem · Role · Decisions · Outcome
-              </span>
+            <div
+              className={cn(
+                "mt-5 flex items-center gap-4 border-t border-line pt-4",
+                project.liveUrl
+                  ? "justify-between"
+                  : "justify-end sm:justify-between lg:justify-end xl:justify-between",
+              )}
+            >
+              {project.liveUrl ? (
+                // Sits above the card's stretched case-study link so both stay clickable.
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 inline-flex items-center gap-1.5 rounded text-sm font-semibold text-fg transition-colors hover:text-accent"
+                >
+                  Live site
+                  <ArrowUpRight className="size-4" aria-hidden="true" />
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
+              ) : (
+                <span className="hidden text-sm text-muted sm:inline lg:hidden xl:inline">
+                  Problem · Role · Decisions · Outcome
+                </span>
+              )}
               <span
                 aria-hidden="true"
                 className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-accent"
@@ -90,12 +112,17 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-/** Selected Work as two columns of equal-height project cards. */
+/** Selected Work as two columns of equal-height project cards; a single card spans both. */
 export function ProjectGrid({ projects }: { projects: Project[] }) {
   return (
     <ul className="grid gap-6 lg:grid-cols-2">
       {projects.map((project, i) => (
-        <Reveal as="li" key={project.slug} delay={(i % 2) * 0.08}>
+        <Reveal
+          as="li"
+          key={project.slug}
+          delay={(i % 2) * 0.08}
+          className={projects.length === 1 ? "lg:col-span-2" : undefined}
+        >
           <ProjectCard project={project} />
         </Reveal>
       ))}

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/** Floating round button (bottom-right) that appears after scrolling and returns to the top. */
+/** Floating round button (bottom-right, above the theme toggle) that appears after scrolling and returns to the top. */
 export function BackToTop() {
   const [visible, setVisible] = useState(false);
 
@@ -29,7 +29,7 @@ export function BackToTop() {
         document.getElementById("main")?.focus({ preventScroll: true });
       }}
       className={cn(
-        "fixed right-4 bottom-4 z-40 inline-flex size-12 items-center justify-center rounded-full border border-line-strong bg-surface/90 text-fg shadow-md shadow-black/15 backdrop-blur transition-[opacity,translate,background-color,color] duration-300 hover:bg-accent hover:text-accent-fg sm:right-6 sm:bottom-6",
+        "fixed right-4 bottom-19 z-40 inline-flex size-12 items-center justify-center rounded-full border border-line-strong bg-surface/90 text-fg shadow-md shadow-black/15 backdrop-blur transition-[opacity,translate,background-color,color] duration-300 hover:bg-accent hover:text-accent-fg sm:right-6 sm:bottom-21",
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0",
       )}
     >

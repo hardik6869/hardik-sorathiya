@@ -112,6 +112,15 @@
   mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 15%, transparent 70%);
 }
 
+/* Hero light: a soft accent wash centred on --focus (the portrait); no pattern, so the page stays calm. */
+@utility hero-light {
+  background: radial-gradient(
+    ellipse 40% 55% at var(--focus, 50% 20%),
+    color-mix(in oklab, var(--accent) 14%, transparent),
+    transparent 70%
+  );
+}
+
 /* Soft accent light behind hero and CTA areas. Decorative only. */
 @utility accent-glow {
   background: radial-gradient(closest-side, color-mix(in oklab, var(--accent) 22%, transparent), transparent);
@@ -154,10 +163,43 @@
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes portrait-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   /* Hero entrance: a short, staggered fade-and-rise (--i sets the order). */
   .fade-up {
     animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
     animation-delay: calc(var(--i, 0) * 80ms + 40ms);
+  }
+
+  /* Hero backdrop and portrait: play once on load, then stay still. */
+  .fade-in {
+    animation: fade-in 1.4s ease-out both;
+  }
+
+  .glow-in {
+    animation: glow-in 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  }
+
+  .portrait-in {
+    animation: portrait-in 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
   }
 }

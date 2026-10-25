@@ -4,7 +4,7 @@
 
 ## Signature moments
 
-- **Hero:** a "Software Engineer" badge and the freelance-availability pill, "Hi, I'm Hardik Sorathiya.", one statement ("…with _React.js, Next.js and TypeScript._"), one line of evidence from the resume, buttons and social icons, and a still portrait that zooms gently on hover. Sizes scale with viewport height so it fits one laptop screen.
+- **Hero:** a "Software Engineer" badge and the freelance-availability pill, "Hi, I'm Hardik Sorathiya.", one statement ("…with _React.js, Next.js and TypeScript._"), one line of evidence from the resume, buttons and social icons, and a cut-out portrait (no frame) on a soft accent light, fading into the page at the bottom. The backdrop is a soft light behind the portrait plus a glow top-left, no pattern. The portrait rises in once on load and lifts slightly on hover. Sizes scale with viewport height so it fits one laptop screen.
 - **About:** the lead paragraph lights up word by word as you scroll; Experience and Education are separate cards.
 - **Work:** a 2-column grid of client project cards (icon, domain, title, summary, tags, "Read case study"), then a "Personal project" block whose single card spans both columns and adds a "Live site" link.
 - **Experience:** the company name stays pinned while the five highlights scroll.
@@ -12,7 +12,8 @@
 - **Approach:** a 2×2 grid of principle cards, then the AI-workflow panel.
 - **Get in touch:** a short intro, the availability pill, and Email / LinkedIn / GitHub link cards in one row.
 - **Case study:** breadcrumb, icon and domain, title and summary; then the sections as one document divided by rules (problem, role, key decisions as a checked list, outcome set off by an accent rule) beside a single, non-sticky details card (type, impact, stack, live site); previous/next links at the end.
-- **Header:** the name as a wordmark on the left (first name in Geist semibold, surname in the italic serif accent), linking Home; page links, the "Get in touch" button and the theme toggle on the right. Resume downloads live in the hero and mobile menu, not the bar.
+- **Header:** the name as a wordmark on the left (first name in Geist semibold, surname in the italic serif accent), linking Home; page links and the "Get in touch" button on the right. Resume downloads live in the hero and mobile menu, not the bar.
+- **Floating buttons (bottom-right):** the theme toggle, always visible, with the back-to-top button stacked above it once you scroll.
 - **Header and footer** sit on `surface` so they separate from the page `bg`, especially in light mode.
 - **Footer:** name, "Software Engineer · Gujarat, India" and one line on the left; page links centered; social icons on the right; copyright below.
 

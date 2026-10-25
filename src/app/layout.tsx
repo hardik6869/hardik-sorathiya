@@ -8,7 +8,7 @@ import { SkipLink } from "@/components/ui/skip-link";
 import { BackToTop } from "@/components/ui/back-to-top";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { InlineScript } from "@/components/ui/inline-script";
-import { themeScript } from "@/components/theme-toggle";
+import { ThemeToggle, themeScript } from "@/components/theme-toggle";
 import { profile } from "@/content/profile";
 import { siteDescription, siteName, siteUrl } from "@/lib/site";
 
@@ -90,6 +90,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <Footer />
+          {/* Floating theme toggle in the bottom-right corner; the back-to-top button stacks above it. */}
+          <ThemeToggle className="fixed right-4 bottom-4 z-40 size-12 rounded-full border border-line-strong bg-surface/90 text-fg shadow-md shadow-black/15 backdrop-blur transition-[background-color,color] duration-300 hover:bg-accent hover:text-accent-fg sm:right-6 sm:bottom-6" />
           <BackToTop />
         </Providers>
       </body>

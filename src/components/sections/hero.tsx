@@ -5,7 +5,7 @@ import { ButtonLink, buttonClasses } from "@/components/ui/button";
 import { GitHubIcon, LinkedInIcon, brandColor } from "@/components/ui/icons";
 import { Availability } from "@/components/ui/availability";
 import { profile } from "@/content/profile";
-import portrait from "../../../public/Hardik.png";
+import portrait from "../../../public/Hardik_profile.webp";
 
 const socials = [
   { href: profile.socials.github.href, label: "GitHub", Icon: GitHubIcon, color: brandColor.github },
@@ -17,29 +17,33 @@ const delay = (i: number) => ({ "--i": i }) as React.CSSProperties;
 
 export function Hero() {
   return (
-    <section aria-labelledby="hero-heading">
+    <section aria-labelledby="hero-heading" className="relative isolate overflow-hidden">
+      {/* Decorative backdrop: soft accent light behind the portrait, a glow top-left and a fading base line. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <div className="fade-in absolute inset-0 hero-light lg:[--focus:80%_45%]" />
+        <div className="glow-in absolute -top-40 -left-40 size-128 opacity-60 accent-glow" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-line-strong to-transparent" />
+      </div>
+
       {/* On lg+ every size below is capped by the viewport height (svh), so the whole hero fits in one screen. */}
       <Container className="grid items-center gap-7 pt-6 pb-12 sm:gap-10 sm:pt-14 sm:pb-16 lg:min-h-[calc(100svh-4rem)] lg:grid-cols-12 lg:gap-10 lg:pt-[4svh] lg:pb-[6svh]">
-        <div className="lg:order-2 lg:col-span-4 lg:col-start-9">
-          {/* Still portrait (no looping motion); a gentle zoom and accent ring on hover. */}
-          <div
-            className="group fade-up relative mx-auto aspect-square w-32 sm:w-52 lg:mr-0 lg:w-full lg:max-w-[min(340px,50svh)]"
-            style={delay(0)}
-          >
-            <div className="size-full overflow-hidden rounded-full border border-line-strong bg-surface shadow-[0_16px_40px_-24px] shadow-black/40 transition-[border-color,box-shadow] duration-500 group-hover:border-accent/60 group-hover:shadow-accent/25">
+        <div className="lg:order-2 lg:col-span-5 lg:col-start-8">
+          {/* Cut-out portrait on an accent light; fades into the page at the bottom. Plays once, lifts slightly on hover. */}
+          <div className="group relative mx-auto aspect-square w-48 sm:w-64 lg:mr-0 lg:w-full lg:max-w-[min(440px,62svh)]">
+            <div aria-hidden="true" className="glow-in absolute inset-[8%] accent-glow" />
+            <div className="portrait-in relative size-full">
               <Image
                 src={portrait}
                 alt={`Portrait of ${profile.name}`}
                 priority
-                placeholder="blur"
-                sizes="(min-width: 1024px) 340px, (min-width: 640px) 208px, 160px"
-                className="size-full scale-[1.04] object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.09]"
+                sizes="(min-width: 1024px) 440px, (min-width: 640px) 256px, 192px"
+                className="size-full mask-[linear-gradient(to_bottom,black_72%,transparent)] object-contain transition-transform duration-500 ease-out motion-safe:group-hover:-translate-y-1.5"
               />
             </div>
           </div>
         </div>
 
-        <div className="lg:order-1 lg:col-span-8">
+        <div className="lg:order-1 lg:col-span-7">
           <div className="fade-up flex flex-wrap items-center gap-x-3 gap-y-2" style={delay(0)}>
             {/* Designation as a clear, high-contrast label. */}
             <span className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-surface px-3.5 py-1.5 text-sm font-semibold text-fg shadow-sm">

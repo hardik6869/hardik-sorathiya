@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { ArrowRight, Download, Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { buttonClasses } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { profile } from "@/content/profile";
 import { isActiveNav, navItems } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -66,8 +65,6 @@ export function Header() {
             </ul>
           </nav>
 
-          <span aria-hidden="true" className="mx-1 hidden h-5 w-px bg-line-strong lg:block" />
-          <ThemeToggle />
           <button
             type="button"
             onClick={openMenu}

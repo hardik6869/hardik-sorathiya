@@ -10,7 +10,7 @@ All portfolio copy lives in typed data. Edit these files to change the site; com
 | `src/content/projects.ts`                   | 4 client projects + 1 personal project, in resume order. Those with `caseStudy` get a page at `/projects/[slug]` |
 | `src/content/approach.ts`                   | Engineering principles and the AI-workflow block                                                                 |
 | `public/resume/Hardik_Sorathiya_Resume.pdf` | Downloadable resume. Replace the file and keep the name                                                          |
-| `public/Hardik.png`                         | Hero portrait                                                                                                    |
+| `public/Hardik_profile.webp`                | Hero portrait: a square cut-out with a transparent background                                                    |
 
 A few short lines live in components because they are layout copy, not facts: the hero statement (`sections/hero.tsx`), the Get in touch intro (`sections/contact.tsx`) and the footer line (`sections/footer.tsx`).
 

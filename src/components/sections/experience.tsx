@@ -29,19 +29,20 @@ export function Experience() {
               </p>
             </div>
 
-            <ul className="border-t border-line lg:col-span-8">
+            {/* Timeline: a hairline links each highlight's icon to the next. */}
+            <ul className="lg:col-span-8">
               {job.highlights.map((h, i) => (
                 <Reveal
                   as="li"
                   key={h.title}
                   delay={i * 0.04}
-                  className="group grid gap-4 border-b border-line py-7 sm:grid-cols-[auto_1fr] sm:gap-6"
+                  className="group relative grid grid-cols-[auto_1fr] gap-5 pb-10 before:absolute before:top-12 before:bottom-2 before:left-5 before:w-px before:bg-line-strong last:pb-0 last:before:hidden sm:gap-6"
                 >
                   <IconTile
                     name={h.icon}
-                    className="transition-transform duration-300 motion-safe:group-hover:scale-110"
+                    className="ring-4 ring-bg transition-transform duration-300 motion-safe:group-hover:scale-110"
                   />
-                  <div>
+                  <div className="pt-1.5">
                     <h4 className="text-lg font-semibold">{h.title}</h4>
                     <p className="mt-2 leading-relaxed text-pretty text-muted">{h.body}</p>
                   </div>

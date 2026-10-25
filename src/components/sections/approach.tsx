@@ -9,7 +9,6 @@ export function Approach() {
   return (
     <Section
       id="approach"
-      tone="band"
       label="Approach"
       title={
         <>
@@ -21,7 +20,7 @@ export function Approach() {
       <ul className="grid gap-5 md:grid-cols-2">
         {approach.map((item, i) => (
           <Reveal as="li" key={item.title} delay={i * 0.08}>
-            <SpotlightCard className="group h-full rounded-3xl border border-line bg-bg p-7 transition-colors duration-300 hover:border-line-strong sm:p-9">
+            <SpotlightCard className="group h-full rounded-3xl border border-line bg-surface p-7 transition-colors duration-300 hover:border-line-strong sm:p-9">
               <IconTile
                 name={item.icon}
                 className="size-12 rounded-2xl transition-transform duration-500 motion-safe:group-hover:-translate-y-1"

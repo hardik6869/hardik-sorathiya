@@ -14,6 +14,16 @@ type SectionProps = {
   children: React.ReactNode;
 };
 
+/** Small uppercase label in a pill, with an accent dot, above each section title. */
+export function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 text-xs font-semibold tracking-[0.14em] text-muted uppercase">
+      <span aria-hidden="true" className="size-1.5 rounded-full bg-accent" />
+      {children}
+    </p>
+  );
+}
+
 /** Section with a stacked header (small label above an oversized title) and full-width content. */
 export function Section({ id, label, title, intro, tone = "plain", className, children }: SectionProps) {
   const headingId = `${id}-heading`;
@@ -25,11 +35,8 @@ export function Section({ id, label, title, intro, tone = "plain", className, ch
     >
       <Container>
         <Reveal as="div" className="max-w-4xl">
-          <p className="flex items-center gap-3 text-sm font-medium text-muted">
-            <span aria-hidden="true" className="h-px w-8 bg-accent" />
-            {label}
-          </p>
-          <h2 id={headingId} className="mt-4 text-h2 font-semibold text-balance">
+          <SectionLabel>{label}</SectionLabel>
+          <h2 id={headingId} className="mt-5 text-h2 font-semibold text-balance">
             {title}
           </h2>
           {intro ? <p className="mt-6 max-w-2xl text-lead text-pretty text-muted">{intro}</p> : null}

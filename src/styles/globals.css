@@ -19,16 +19,17 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f6f5f2;
+  /* Cool neutrals: no warm off-white mixing with the blue accent. */
+  --bg: #f4f6f9;
   --surface: #ffffff;
-  --fg: #141414;
-  --muted: #55555c;
-  --line: #e3e2de;
-  --line-strong: #cfcdc8;
+  --fg: #0f1218;
+  --muted: #51555e;
+  --line: #e1e5ec;
+  --line-strong: #c8ced8;
   --accent: #2f4fd6;
   --accent-fg: #ffffff;
-  --panel: #141414;
-  --panel-fg: #f6f5f2;
+  --panel: #10131a;
+  --panel-fg: #f4f6f9;
 }
 
 @theme inline {

@@ -4,7 +4,7 @@
 
 ## Signature moments
 
-- **Hero:** a "Software Engineer" badge and the freelance-availability pill, "Hi, I'm Hardik Sorathiya.", one statement ("…with _React.js, Next.js and TypeScript._"), one line of evidence from the resume, buttons and social icons, and a cut-out portrait (no frame) on a soft accent light, fading into the page at the bottom. The backdrop is a soft light behind the portrait plus a glow top-left, no pattern. The portrait rises in once on load and lifts slightly on hover. Sizes scale with viewport height so it fits one laptop screen.
+- **Hero:** a "Software Engineer" badge and the freelance-availability pill, "Hi, I'm Hardik Sorathiya.", one statement ("…with _React.js, Next.js and TypeScript._"), one line of evidence from the resume, buttons (side by side on phones) and social icons after a hairline divider, and a cut-out portrait (above the text and aligned with it below `lg`) (no frame) on a soft accent light, fading into the page at the bottom. The backdrop is a soft light behind the portrait plus a glow top-left, no pattern. The portrait rises in once on load and lifts slightly on hover. Sizes scale with viewport height so it fits one laptop screen.
 - **About:** the lead paragraph lights up word by word as you scroll; Experience and Education are separate cards.
 - **Work:** a 2-column grid of client project cards (icon, domain, title, summary, tags, "Read case study"), then a "Personal project" block whose single card spans both columns and adds a "Live site" link.
 - **Experience:** the company name stays pinned while the highlights scroll as a timeline (a hairline links each icon to the next).
@@ -12,10 +12,10 @@
 - **Approach:** a 2×2 grid of principle cards, then the AI-workflow panel.
 - **Get in touch:** a full-width `surface` band: intro and availability on the left, Email / LinkedIn / GitHub link cards stacked on the right (below on smaller screens). The email may only break after the "@".
 - **Case study:** breadcrumb, icon and domain, title and summary; then the sections as one document divided by rules (problem, role, key decisions as a checked list, outcome set off by an accent rule) beside a single, non-sticky details card (type, impact, stack, live site); previous/next links at the end.
-- **Header:** the name as a wordmark on the left (first name in Geist semibold, surname in the italic serif accent), linking Home; page links and the "Get in touch" button on the right. Resume downloads live in the hero and mobile menu, not the bar.
+- **Header:** the logo on the left (an accent "HS" monogram tile plus the wordmark: first name in Geist semibold, surname in the italic serif accent), linking Home; page links in a segmented pill (the current page is a raised `surface` chip) and the "Get in touch" button on the right. A soft shadow appears once the page scrolls. The mobile menu shows the logo, the page links (current page marked with an accent dot), then availability, "Get in touch" and Resume buttons and the social icons. Resume downloads live in the hero, mobile menu and footer, not the bar.
 - **Floating buttons (bottom-right):** the theme toggle, always visible, with the back-to-top button stacked above it once you scroll.
 - **Header and footer** sit on `surface` so they separate from the page `bg`, especially in light mode.
-- **Footer:** name, "Software Engineer · Gujarat, India" and one line on the left; page links centered; social icons on the right; copyright below.
+- **Footer:** logo, one line and "Software Engineer · Gujarat, India" on the left; a "Pages" column (Home plus the nav pages) and a "Connect" column (GitHub, LinkedIn, Email, Resume, each with its icon) on the right; copyright and "Built with" below, kept clear of the floating buttons.
 
 ## Tokens (`src/styles/globals.css`)
 

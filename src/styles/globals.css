@@ -203,4 +203,9 @@
   .portrait-in {
     animation: portrait-in 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
   }
+
+  /* Mobile menu content: a short fade-and-rise each time the menu opens. */
+  dialog[open] .menu-in {
+    animation: fade-up 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
 }

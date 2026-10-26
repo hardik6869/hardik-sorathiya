@@ -53,8 +53,8 @@ test.describe("section pages", () => {
     // Next.js keeps the previous page hidden in the DOM (instant back/forward), so count visible sections only.
     await expect(page.locator("main section#projects:visible")).toHaveCount(0);
 
-    // The logo is the Home link (there is no separate "Home" item in the nav).
-    await page.getByRole("link", { name: "Hardik Sorathiya, home" }).click();
+    // The header logo is the Home link (there is no separate "Home" item in the nav).
+    await page.getByRole("banner").getByRole("link", { name: "Hardik Sorathiya, home" }).click();
     await expect(page).toHaveURL(/\/$/);
     for (const id of allIds) {
       await expect(page.locator(`main section#${id}:visible`)).toHaveCount(1);

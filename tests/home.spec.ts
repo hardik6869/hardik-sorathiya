@@ -34,11 +34,11 @@ test.describe("home page", () => {
     }
   });
 
-  test("shows freelance availability in the hero", async ({ page }) => {
+  test("shows freelance availability in the contact section", async ({ page }) => {
     await page.goto("/");
-    const hero = page.locator("main > section").first();
-    await expect(hero.getByText("Open to freelance work")).toBeVisible();
-    await expect(hero.getByText("15–25 hrs/week")).toBeVisible();
+    const contact = page.locator("section#contact");
+    await expect(contact.getByText("Open to freelance work")).toBeVisible();
+    await expect(contact.getByText("15–25 hrs/week")).toBeVisible();
   });
 
   test("floating back-to-top button appears after scrolling and returns to the top", async ({ page }) => {
@@ -59,7 +59,7 @@ test.describe("home page", () => {
 
   test("resume download link points at the PDF", async ({ page, request }) => {
     await page.goto("/");
-    // Every resume link (hero, header, mobile menu) points at the same PDF.
+    // Every resume link (hero, mobile menu, footer) points at the same PDF.
     const link = page.locator('a[download][href$=".pdf"]').first();
     const href = await link.getAttribute("href");
     expect(href).toBe("/resume/Hardik_Sorathiya_Resume.pdf");

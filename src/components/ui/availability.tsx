@@ -2,7 +2,7 @@ import { profile } from "@/content/profile";
 import { cn } from "@/lib/utils";
 
 /**
- * Highlighted freelance availability (hero and contact section). One line on wider screens;
+ * Highlighted freelance availability (contact section and mobile menu). One line on wider screens;
  * on phones the detail drops below the status.
  */
 export function Availability({ className }: { className?: string }) {

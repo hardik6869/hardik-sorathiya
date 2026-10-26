@@ -2,17 +2,17 @@
 
 All portfolio copy lives in typed data. Edit these files to change the site; components only render them.
 
-| File                                        | Contains                                                                                                         |
-| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `src/content/profile.ts`                    | Name, role, freelance availability, footer region, email, socials, resume path, about paragraphs, education      |
-| `src/content/skills.ts`                     | The 7 skill groups from the resume, as cards (backend noted as working knowledge)                                |
-| `src/content/experience.ts`                 | The Simform role, condensed to 6 titled outcomes                                                                 |
-| `src/content/projects.ts`                   | 4 client projects + 1 personal project, in resume order. Those with `caseStudy` get a page at `/projects/[slug]` |
-| `src/content/approach.ts`                   | Engineering principles and the AI-workflow block                                                                 |
-| `public/resume/Hardik_Sorathiya_Resume.pdf` | Downloadable resume. Replace the file and keep the name                                                          |
-| `public/Hardik_profile.webp`                | Hero portrait: a square cut-out with a transparent background                                                    |
+| File                                        | Contains                                                                                                                                               |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `src/content/profile.ts`                    | Name, role, hero copy (headline, summary, highlights), freelance availability, footer region, email, socials, resume path, about paragraphs, education |
+| `src/content/skills.ts`                     | The 7 skill groups from the resume, as cards (backend noted as working knowledge)                                                                      |
+| `src/content/experience.ts`                 | The Simform role, condensed to 6 titled outcomes                                                                                                       |
+| `src/content/projects.ts`                   | 4 client projects + 1 personal project, in resume order. Those with `caseStudy` get a page at `/projects/[slug]`                                       |
+| `src/content/approach.ts`                   | Engineering principles and the AI-workflow block                                                                                                       |
+| `public/resume/Hardik_Sorathiya_Resume.pdf` | Downloadable resume. Replace the file and keep the name                                                                                                |
+| `public/Hardik_profile.webp`                | Hero portrait: a square cut-out with a transparent background                                                                                          |
 
-A few short lines live in components because they are layout copy, not facts: the hero statement (`sections/hero.tsx`), the Get in touch intro (`sections/contact.tsx`) and the footer line (`sections/footer.tsx`).
+A few short lines live in components because they are layout copy, not facts: the Get in touch intro (`sections/contact.tsx`) and the footer line (`sections/footer.tsx`).
 
 ## Rules
 

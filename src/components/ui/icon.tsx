@@ -11,7 +11,6 @@ import {
   GraduationCap,
   KeyRound,
   Layers,
-  Network,
   Palette,
   Rocket,
   ShieldCheck,
@@ -27,7 +26,6 @@ const icons: Record<IconName, LucideIcon> = {
   code: CodeXml,
   database: Database,
   palette: Palette,
-  network: Network,
   flask: FlaskConical,
   sparkles: Sparkles,
   rocket: Rocket,
@@ -66,7 +64,6 @@ const iconTone: Record<IconName, keyof typeof tones> = {
   code: "blue", // code / frameworks
   database: "teal", // data
   palette: "pink", // design
-  network: "cyan", // APIs
   flask: "green", // testing
   sparkles: "violet", // AI
   rocket: "orange", // delivery

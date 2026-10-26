@@ -7,7 +7,17 @@ type SocialLink = {
 export type Profile = {
   name: string;
   role: string;
-  /** Freelance availability shown in the hero and contact sections. */
+  /**
+   * Hero copy. The headline's `mark` word gets a highlighter sweep and `accent` is set in the serif accent.
+   * `summary` may wrap words in **double asterisks** to emphasize them. `highlights` are the three things
+   * recruiters look for first.
+   */
+  hero: {
+    headline: { lead: string; mark: string; rest: string; accent: string };
+    summary: string;
+    highlights: { icon: IconName; title: string; detail: string }[];
+  };
+  /** Freelance availability shown in the contact section and mobile menu. */
   availability: { status: string; detail: string };
   region: string;
   email: string;
@@ -22,7 +32,6 @@ export type IconName =
   | "code"
   | "database"
   | "palette"
-  | "network"
   | "flask"
   | "sparkles"
   | "rocket"

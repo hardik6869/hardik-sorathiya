@@ -3,6 +3,22 @@ import type { Profile } from "@/types/content";
 export const profile: Profile = {
   name: "Hardik Sorathiya",
   role: "Software Engineer",
+  // Hero copy, from the resume's headline, summary and skills. Career-level only: project details live in Work.
+  hero: {
+    headline: {
+      lead: "Building",
+      mark: "scalable",
+      rest: ", production-grade web apps with",
+      accent: "React.js & Next.js.",
+    },
+    summary:
+      "With **nearly 5 years** of experience, I own frontend modules end to end, from requirements and architecture to testing and release. I work directly with clients, take over unfamiliar codebases and guide other developers to keep delivery on track.",
+    highlights: [
+      { icon: "users", title: "Mentoring & clients", detail: "Guiding developers, aligning with clients" },
+      { icon: "database", title: "Backend knowledge", detail: "Node.js, Express, MongoDB" },
+      { icon: "sparkles", title: "AI-assisted delivery", detail: "Claude Code, GitHub Copilot" },
+    ],
+  },
   availability: {
     status: "Open to freelance work",
     detail: "15–25 hrs/week",

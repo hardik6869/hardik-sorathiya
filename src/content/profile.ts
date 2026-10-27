@@ -16,7 +16,7 @@ export const profile: Profile = {
     highlights: [
       { icon: "users", title: "Mentoring & clients", detail: "Guiding developers, aligning with clients" },
       { icon: "database", title: "Backend knowledge", detail: "Node.js, Express, MongoDB" },
-      { icon: "sparkles", title: "AI-assisted delivery", detail: "Claude Code, GitHub Copilot" },
+      { icon: "sparkles", title: "AI-assisted development", detail: "Claude Code, GitHub Copilot" },
     ],
   },
   availability: {

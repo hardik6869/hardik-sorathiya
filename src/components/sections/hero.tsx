@@ -66,7 +66,8 @@ export function Hero() {
                   priority
                   fill
                   sizes="(min-width: 1024px) 560px, (min-width: 640px) 288px, 240px"
-                  className="[mask-image:linear-gradient(to_bottom,black_80%,transparent),linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] [mask-composite:intersect] object-contain object-bottom"
+                  draggable={false}
+                  className="mask-[linear-gradient(to_bottom,black_80%,transparent),linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mask-intersect object-contain object-bottom select-none"
                 />
               </div>
             </div>
@@ -115,23 +116,27 @@ export function Hero() {
               {emphasize(summary)}
             </p>
 
-            {/* Three compact highlights recruiters look for, from the resume, divided by hairlines. */}
+            {/* Three compact highlights recruiters look for, from the resume, divided by hairlines. Titles stay on one
+                line: columns size to their content, and where the strip is too narrow for the icon beside the title
+                (sm–md and lg–xl) the icon sits above it. */}
             <ul
-              className="fade-up mt-6 grid gap-3 border-y border-line py-3.5 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-line lg:mt-[3svh]"
+              className="fade-up mt-6 grid gap-3 border-y border-line py-3.5 sm:grid-cols-[repeat(3,auto)] sm:gap-0 sm:divide-x sm:divide-line lg:mt-[3svh]"
               style={delay(3)}
               aria-label="Highlights"
             >
               {highlights.map(({ icon, title, detail }) => (
                 <li
                   key={title}
-                  className="group flex items-center gap-2.5 sm:px-4 sm:first:pl-0 sm:last:pr-0"
+                  className="group flex items-center gap-2.5 sm:px-4 sm:first:pl-0 sm:last:pr-0 sm:max-md:flex-col sm:max-md:items-start lg:max-xl:flex-col lg:max-xl:items-start"
                 >
                   <IconTile
                     name={icon}
-                    className="size-8 rounded-lg transition-transform duration-300 motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:rotate-[-6deg] [&_svg]:size-4"
+                    className="size-8 rounded-lg transition-transform duration-300 motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:-rotate-6 [&_svg]:size-4"
                   />
                   <span className="min-w-0">
-                    <span className="block text-[13px] leading-tight font-semibold">{title}</span>
+                    <span className="block text-[13px] leading-tight font-semibold whitespace-nowrap">
+                      {title}
+                    </span>
                     <span className="mt-0.5 block text-xs leading-snug text-muted">{detail}</span>
                   </span>
                 </li>

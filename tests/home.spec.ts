@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { projects } from "../src/content/projects";
 
 test.describe("home page", () => {
   test("renders the hero and every section", async ({ page }) => {
@@ -10,7 +11,7 @@ test.describe("home page", () => {
     for (const id of ["about", "skills", "experience", "projects", "approach", "contact"]) {
       await expect(page.locator(`section#${id} h2`)).toHaveCount(1);
     }
-    await expect(page.locator("#projects article")).toHaveCount(5);
+    await expect(page.locator("#projects article")).toHaveCount(projects.length);
     // The hero intentionally has no stat cards.
     await expect(page.locator("main > section").first().locator("dl")).toHaveCount(0);
   });

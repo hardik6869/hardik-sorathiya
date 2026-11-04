@@ -106,6 +106,12 @@ function CaseStudyBlock({
   );
 }
 
+const projectKindLabel: Record<NonNullable<Project["kind"]>, string> = {
+  client: "Client project",
+  internal: "Internal tool",
+  personal: "Personal project",
+};
+
 /** The one card beside the content: type, impact, stack and (for personal work) the live site. */
 function DetailsCard({ project }: { project: Project }) {
   return (
@@ -113,9 +119,7 @@ function DetailsCard({ project }: { project: Project }) {
       <dl className="space-y-5 text-sm">
         <div>
           <dt className={label}>Project type</dt>
-          <dd className="mt-1.5 font-medium">
-            {project.kind === "personal" ? "Personal project" : "Client project"}
-          </dd>
+          <dd className="mt-1.5 font-medium">{projectKindLabel[project.kind ?? "client"]}</dd>
         </div>
         {project.metric ? (
           <div>

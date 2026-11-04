@@ -21,11 +21,16 @@ export function Approach() {
         {approach.map((item, i) => (
           <Reveal as="li" key={item.title} delay={i * 0.08}>
             <SpotlightCard className="group h-full rounded-3xl border border-line bg-surface p-7 transition-colors duration-300 hover:border-line-strong sm:p-9">
-              <IconTile
-                name={item.icon}
-                className="size-12 rounded-2xl transition-transform duration-500 motion-safe:group-hover:-translate-y-1"
-              />
-              <h3 className="mt-6 text-xl font-semibold tracking-tight sm:text-2xl">{item.title}</h3>
+              {/* Icon and title share one row to keep the cards compact. */}
+              <div className="flex items-center gap-4">
+                <IconTile
+                  name={item.icon}
+                  className="size-12 shrink-0 rounded-2xl transition-transform duration-500 motion-safe:group-hover:-translate-y-1"
+                />
+                <h3 className="text-xl font-semibold tracking-tight text-balance sm:text-2xl">
+                  {item.title}
+                </h3>
+              </div>
               <p className="mt-3 leading-relaxed text-pretty text-muted">{item.body}</p>
             </SpotlightCard>
           </Reveal>

@@ -6,20 +6,23 @@ import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { skillGroups } from "@/content/skills";
 import { cn } from "@/lib/utils";
 
-// Asymmetric 12-column layout for the seven core groups, in content order (7+5, 4+4+4, 5+7).
+// Asymmetric 12-column layout for the six core groups, in content order (7+5, 5+7, 7+5):
+// the wider column goes to the group with more items.
 const spans = [
   "lg:col-span-7",
   "lg:col-span-5",
-  "lg:col-span-4",
-  "lg:col-span-4",
-  "lg:col-span-4",
   "lg:col-span-5",
   "lg:col-span-7",
+  "lg:col-span-7",
+  "lg:col-span-5",
 ];
+
+const groupLabel = "mt-12 text-sm font-semibold tracking-wider text-muted uppercase";
 
 export function Skills() {
   const core = skillGroups.filter((g) => g.tier === "core");
   const supporting = skillGroups.filter((g) => g.tier === "supporting");
+  const soft = skillGroups.filter((g) => g.tier === "soft");
 
   return (
     <Section
@@ -53,12 +56,16 @@ export function Skills() {
       {/* Supporting skills: compact cards in the same style as the core cards above. */}
       {supporting.length > 0 ? (
         <>
-          <h3 className="mt-12 text-sm font-semibold tracking-wider text-muted uppercase">
-            Also working with
-          </h3>
-          <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <h3 className={groupLabel}>Testing &amp; tooling</h3>
+          <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {supporting.map((group, i) => (
-              <Reveal as="li" key={group.title} delay={(i % 4) * 0.05}>
+              <Reveal
+                as="li"
+                key={group.title}
+                delay={(i % 3) * 0.05}
+                // On the two-column tablet grid, the odd last card spans the full row instead of sitting alone.
+                className="sm:last:odd:col-span-2 lg:last:odd:col-span-1"
+              >
                 <SpotlightCard className="h-full rounded-2xl border border-line bg-bg p-5 transition-colors duration-300 hover:border-line-strong">
                   <div className="flex items-center gap-3">
                     {group.icon ? <IconTile name={group.icon} className="size-9" /> : null}
@@ -83,6 +90,17 @@ export function Skills() {
           </ul>
         </>
       ) : null}
+
+      {/* Soft skills are not tools, so they get their own slim strip instead of a tool card. */}
+      {soft.map((group) => (
+        <Reveal key={group.title}>
+          <h3 className={groupLabel}>{group.title}</h3>
+          <SpotlightCard className="mt-5 flex flex-col gap-4 rounded-2xl border border-line bg-bg p-5 transition-colors duration-300 hover:border-line-strong sm:flex-row sm:items-center">
+            {group.icon ? <IconTile name={group.icon} className="size-9" /> : null}
+            <TagList items={group.items} label={group.title} />
+          </SpotlightCard>
+        </Reveal>
+      ))}
     </Section>
   );
 }

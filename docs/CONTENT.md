@@ -27,7 +27,7 @@ Add a `caseStudy` object to a project in `projects.ts` with its sections (_The p
 
 ## Open items to confirm
 
-- [ ] The 35–40% performance gain, 5+ access levels and 35+ endpoint / 8+ module / under-2-week migration are Hardik's to claim, and how each was measured
+- [ ] The 5+ access levels, 35+ endpoint / 8+ module / under-3-week migration and 18–20 minute plugin setup are Hardik's to claim, and how each was measured
 - [ ] Simform end date wording (currently "Jan 2022 – Oct 2026")
 - [x] Production domain: `https://hardik-sorathiya.vercel.app` (default in `src/lib/site.ts`)
 - [x] A personal project worth featuring: LearnHub (`learnhub-hardik.vercel.app`)

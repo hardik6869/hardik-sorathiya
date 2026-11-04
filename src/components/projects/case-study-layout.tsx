@@ -114,7 +114,11 @@ function DetailsCard({ project }: { project: Project }) {
         <div>
           <dt className={label}>Project type</dt>
           <dd className="mt-1.5 font-medium">
-            {project.kind === "personal" ? "Personal project" : "Client project"}
+            {project.kind === "personal"
+              ? "Personal project"
+              : project.kind === "internal"
+                ? "Internal tool"
+                : "Client project"}
           </dd>
         </div>
         {project.metric ? (

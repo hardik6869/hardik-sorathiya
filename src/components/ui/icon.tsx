@@ -15,6 +15,7 @@ import {
   Rocket,
   ShieldCheck,
   Sparkles,
+  SquareTerminal,
   Table2,
   Users,
   type LucideIcon,
@@ -41,6 +42,7 @@ const icons: Record<IconName, LucideIcon> = {
   chart: ChartLine,
   briefcase: Briefcase,
   graduation: GraduationCap,
+  terminal: SquareTerminal,
 };
 
 // Tile colors per icon, chosen to match what the icon means. Full class strings so Tailwind
@@ -79,6 +81,7 @@ const iconTone: Record<IconName, keyof typeof tones> = {
   chart: "emerald", // finance
   briefcase: "orange", // work
   graduation: "indigo", // education
+  terminal: "cyan", // developer tooling
 };
 
 /** The bare icon (no tile), e.g. for large decorative watermarks. */

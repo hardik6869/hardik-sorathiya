@@ -46,14 +46,15 @@ export type IconName =
   | "clock"
   | "chart"
   | "briefcase"
-  | "graduation";
+  | "graduation"
+  | "terminal";
 
 export type SkillGroup = {
   title: string;
   note?: string;
   items: string[];
-  /** Core groups render as cards; supporting groups render as compact rows. */
-  tier: "core" | "supporting";
+  /** Core groups render as large cards, supporting groups as compact cards, soft skills as one slim strip. */
+  tier: "core" | "supporting" | "soft";
   icon?: IconName;
 };
 
@@ -74,8 +75,8 @@ type CaseStudySection = {
 
 export type Project = {
   slug: string;
-  /** Client work is anonymized; personal projects are not. Defaults to client. */
-  kind?: "client" | "personal";
+  /** Client and internal work is anonymized; personal projects are not. Defaults to client. */
+  kind?: "client" | "internal" | "personal";
   title: string;
   domain: string;
   /** Public live site, for personal projects only. */

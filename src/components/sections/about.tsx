@@ -28,7 +28,7 @@ export function About() {
       label="About"
       title={
         <>
-          Building reliable frontends <em className="serif-accent text-accent">for nearly 5 years.</em>
+          Building reliable frontends <em className="serif-accent text-accent">for 4+ years.</em>
         </>
       }
     >
@@ -60,6 +60,11 @@ export function About() {
                     </span>
                     <span className="text-muted"> · {job.duration}</span>
                   </p>
+                  {job.earlierRoles?.map((earlier) => (
+                    <p key={earlier.role} className="mt-1.5 text-sm text-muted">
+                      Earlier: {earlier.role} · {earlier.start} – {earlier.end}
+                    </p>
+                  ))}
                 </li>
               ))}
             </InfoCard>

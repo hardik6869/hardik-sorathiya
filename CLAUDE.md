@@ -15,7 +15,7 @@ Static-first personal portfolio. Next.js 16 (App Router, Cache Components), stri
 ## Content rules
 
 - **Nothing is invented.** Every claim, metric and project detail comes from the resume (`public/resume/`) or from Hardik directly. Don't add promises (e.g. reply times) he hasn't made.
-- Designation is **"Software Engineer"**. Write years as digits ("nearly 5 years"). Use **"React.js"** (not "React" or "React.JS") in visible copy.
+- Designation is **"Software Engineer"**. Write years as digits ("4+ years", matching the resume). Use **"React.js"** (not "React" or "React.JS") in visible copy.
 - Client work is **anonymized**: generic platform names, no client names, no real screenshots. Case studies are text-only (problem, role, key decisions, outcome).
 - No company name in the hero. Location appears only in the footer ("Software Engineer · Gujarat, India").
 - Never publish the phone number.

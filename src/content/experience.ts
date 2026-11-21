@@ -4,9 +4,10 @@ export const experience: Experience[] = [
   {
     role: "Software Engineer",
     company: "Simform",
-    start: "Jan 2022",
+    start: "Apr 2022",
     end: "Oct 2026",
-    duration: "4 yrs 9 mos",
+    duration: "4 yrs 5 mos",
+    earlierRoles: [{ role: "React.js Intern", start: "Jan 2022", end: "Apr 2022", duration: "4 mos" }],
     highlights: [
       {
         title: "End-to-end delivery",
@@ -16,7 +17,7 @@ export const experience: Experience[] = [
       {
         title: "Fast promotion",
         icon: "badge-check",
-        body: "Promoted from trainee to Software Engineer in 4 months, ahead of the standard 6-month program.",
+        body: "Joined as an intern in Jan 2022 and was onboarded as Software Engineer in 4 months, ahead of the standard 6-month program.",
       },
       {
         title: "Architecture & mentoring",

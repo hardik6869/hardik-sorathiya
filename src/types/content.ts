@@ -64,6 +64,8 @@ export type Experience = {
   start: string;
   end: string;
   duration: string;
+  /** Earlier roles at the same company (e.g. the internship), shown as a compact line under the main role. */
+  earlierRoles?: { role: string; start: string; end: string; duration: string }[];
   highlights: { title: string; body: string; icon: IconName }[];
 };
 

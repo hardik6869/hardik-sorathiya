@@ -12,7 +12,7 @@ export const profile: Profile = {
       accent: "React.js & Next.js.",
     },
     summary:
-      "With **nearly 5 years** of experience building for legal-tech, fintech and enterprise clients, I own modules end to end, from architecture to release. I work directly with clients, take over unfamiliar codebases and mentor developers to keep delivery on track.",
+      "With **4+ years** of experience building for legal-tech, fintech and enterprise clients, I own modules end to end, from architecture to release. I work directly with clients, take over unfamiliar codebases and mentor developers to keep delivery on track.",
     highlights: [
       { icon: "users", title: "Mentoring & clients", detail: "Mentoring developers, aligning with clients" },
       { icon: "database", title: "Backend knowledge", detail: "Node.js, Express, MongoDB" },
@@ -41,7 +41,7 @@ export const profile: Profile = {
   },
   // About intro: restates the resume's professional summary. No project or client names.
   about: [
-    "I'm a Software Engineer and frontend specialist with nearly 5 years of experience building production web apps in React.js, Next.js and TypeScript for legal-tech, fintech and enterprise clients, with working knowledge of Node.js, Express and MongoDB.",
+    "I'm a Software Engineer and frontend specialist with 4+ years of experience building production web apps in React.js, Next.js and TypeScript for legal-tech, fintech and enterprise clients, with working knowledge of Node.js, Express and MongoDB.",
     "I own modules end to end, from architecture to release. I work directly with clients, take over unfamiliar codebases and mentor developers to keep delivery on track.",
     "Day to day I use AI-assisted tools, Claude Code (Plugins, Skills, Commands, Agents, MCP) and GitHub Copilot, to work faster.",
   ],

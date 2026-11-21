@@ -27,6 +27,14 @@ export function Experience() {
                 </span>
                 <span className="text-muted">· {job.duration}</span>
               </p>
+              {job.earlierRoles?.map((earlier) => (
+                <p key={earlier.role} className="mt-3 text-sm text-muted">
+                  Started as <span className="font-medium text-fg">{earlier.role}</span> ·{" "}
+                  <span className="whitespace-nowrap">
+                    <time>{earlier.start}</time> – <time>{earlier.end}</time> · {earlier.duration}
+                  </span>
+                </p>
+              ))}
             </div>
 
             {/* Timeline: a hairline links each highlight's icon to the next. */}

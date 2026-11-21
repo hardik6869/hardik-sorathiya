@@ -6,7 +6,7 @@ All portfolio copy lives in typed data. Edit these files to change the site; com
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `src/content/profile.ts`                    | Name, role, hero copy (headline, summary, highlights), freelance availability, footer region, email, socials, resume path, about paragraphs, education |
 | `src/content/skills.ts`                     | The 7 skill groups from the resume, as cards (backend noted as working knowledge)                                                                      |
-| `src/content/experience.ts`                 | The Simform role, condensed to 6 titled outcomes                                                                                                       |
+| `src/content/experience.ts`                 | The Simform role (with the internship as an earlier role), condensed to titled outcomes                                                                |
 | `src/content/projects.ts`                   | 4 client projects + 1 personal project, in resume order. Those with `caseStudy` get a page at `/projects/[slug]`                                       |
 | `src/content/approach.ts`                   | Engineering principles and the AI-workflow block                                                                                                       |
 | `public/resume/Hardik_Sorathiya_Resume.pdf` | Downloadable resume. Replace the file and keep the name                                                                                                |
@@ -28,6 +28,6 @@ Add a `caseStudy` object to a project in `projects.ts` with its sections (_The p
 ## Open items to confirm
 
 - [ ] The 5+ access levels, 35+ endpoint / 8+ module / under-3-week migration and 18–20 minute plugin setup are Hardik's to claim, and how each was measured
-- [ ] Simform end date wording (currently "Jan 2022 – Oct 2026")
+- [x] Simform dates: React.js Intern Jan 2022 – Apr 2022 (`earlierRoles`), Software Engineer Apr 2022 – Oct 2026
 - [x] Production domain: `https://hardik-sorathiya.vercel.app` (default in `src/lib/site.ts`)
 - [x] A personal project worth featuring: LearnHub (`learnhub-hardik.vercel.app`)
